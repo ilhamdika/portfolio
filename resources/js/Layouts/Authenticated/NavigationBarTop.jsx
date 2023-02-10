@@ -30,7 +30,7 @@ export default function NavigationBarTop() {
                 <Nav className="txtNav justify-content-end flex-grow-1 pe-3">
                   <Link href={route('prototype.awal')}>Home</Link>
                   <Link href={route('prototype.portfolio')}>My Portfolio</Link>
-                  <Link href="#action2">About me</Link>
+                  <Link href={route('prototype.about')}>About me</Link>
                   
                 </Nav>
                 

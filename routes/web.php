@@ -35,6 +35,9 @@ Route::prefix('prototype')->name('prototype.')->group(function () {
     route::get('/show/{name}', function () {
         return inertia::render('Prototype/Show');
     })->name('show');
+    Route::get('/about', function () {
+        return Inertia::render('Prototype/About');
+    })->name('about');
 });
 
 
