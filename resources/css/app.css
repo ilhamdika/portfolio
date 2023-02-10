@@ -1,11 +1,11 @@
 @import 'card.css';
+@import 'detail.css';
 @import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 *{
     font-family: poppins;
-   
+  
 }
-
 .logoNav a{
     text-decoration: none;
     font-size: 25px;
@@ -15,7 +15,7 @@
 
 .navbarCoba {
     padding: 10px 50px;
-    background-color: white;
+   
 }
 
 .txtNav a{

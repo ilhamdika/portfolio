@@ -11,7 +11,9 @@ export default function NavigationBarTop() {
         <Navbar key={expand} expand={expand} className=" navbarCoba mb-3 ">
           <Container fluid>
             <div className='logoNav'>
-              <Link>This me</Link>
+              <Link href={route('prototype.awal')}>
+                This me
+              </Link>
             </div>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
