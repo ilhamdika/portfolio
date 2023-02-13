@@ -11,7 +11,7 @@ export default function NavigationBarTop() {
         <Navbar key={expand} expand={expand} className=" navbarCoba mb-3 ">
           <Container fluid>
             <div className='logoNav'>
-              <Link href={route('prototype.awal')}>
+              <Link href={route('prototype.home')}>
                 This me
               </Link>
             </div>
@@ -28,7 +28,7 @@ export default function NavigationBarTop() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="txtNav justify-content-end flex-grow-1 pe-3">
-                  <Link href={route('prototype.awal')}>Home</Link>
+                  <Link href={route('prototype.home')}>Home</Link>
                   <Link href={route('prototype.portfolio')}>My Portfolio</Link>
                   <Link href={route('prototype.about')}>About me</Link>
                   

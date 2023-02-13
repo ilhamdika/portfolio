@@ -7,7 +7,7 @@ export default function CardPortfolio({
     return (
         <div className="row itms itemcont">
         
-
+        
         
         <div className="col-md-6 col-xs-6 col-sm-6 col-lg-12">
             <div className="movie-card">

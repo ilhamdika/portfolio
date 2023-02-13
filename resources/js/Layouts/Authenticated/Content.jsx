@@ -4,7 +4,7 @@ export default function Content (){
         <div className="konten">
 <div className="container">
   <div className="row">
-    <div className="col-lg-7 col-12">
+    <div className="col-lg-6 col-12">
       
       <div data-aos="fade-down">
       <h1>My Awesome</h1>
@@ -13,7 +13,7 @@ export default function Content (){
       <p >Sesuatu yang saya kerjakan dengan senang hati, karena karya yang baik muncul dari suasana hati yang senang. </p>
     </div>
     </div>
-    <div className="col-lg-5 col-12">
+    <div className="col-lg-6 col-12">
       
       <div data-aos="zoom-in-left"  data-aos-offset="300"
       data-aos-easing="ease-in-sine" >

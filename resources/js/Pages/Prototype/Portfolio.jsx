@@ -5,9 +5,11 @@ import NavigationBarTop from "@/Layouts/Authenticated/NavigationBarTop";
 export default function Portfolio() {
     return (
         <>
-       
         <NavigationBarTop />
-            
+       
+            <center>
+            <h1>This is my Portfolio</h1>
+            </center>
         {[1,2,3,4,5,6].map(i=> (
             <CardPortfolio key={i}
             name="Something Item"
