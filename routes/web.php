@@ -26,12 +26,27 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::prefix('prototype')->name('prototype.')->group(function () {
-    Route::get('/awal', function () {
-        return Inertia::render('Prototype/Awal');
-    })->name('awal');
+    Route::get('/home', function () {
+        return Inertia::render('Prototype/Home');
+    })->name('home');
     Route::get('/portfolio', function () {
         return Inertia::render('Prototype/Portfolio');
     })->name('portfolio');
+    route::get('/show/{name}', function () {
+        return inertia::render('Prototype/Show');
+    })->name('show');
+    Route::get('/about', function () {
+        return Inertia::render('Prototype/About');
+    })->name('about');
+});
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    route::get('/login', function () {
+        return inertia::render('Prototype/Admin/Login');
+    })->name('login');
+    Route::get('/dashboard', function () {
+        return inertia::render('Prototype/Admin/Dashboard');
+    })->name('dashboard');
 });
 
 

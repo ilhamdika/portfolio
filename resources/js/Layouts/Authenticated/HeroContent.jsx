@@ -5,11 +5,12 @@ import Button from '@/Components/PrimaryButton';
 
 export default function HeroContent() {
     return (
+        
         <Container>
             <Row>
         <Col sm={6}>
             <div className="heroContent">
-            <h1 >Know me better than me.
+            <h1 className='animate__backInDown'>Know me better than me.
               and start <span>happy</span> with me</h1> 
 
               
@@ -30,6 +31,8 @@ export default function HeroContent() {
         </Col>
       </Row>
       </Container>
+
+
     )
     
 }
