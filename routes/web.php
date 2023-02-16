@@ -23,24 +23,13 @@ use App\Http\Controllers\User\AboutMeController;
 
 
 
-// Route::get('/', function () {
-//     return Inertia::render('User/Index');
-// })->name('home');
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/portfolio', [PortfolioController::class, 'portfolio'])->name('portfolio');
 Route::get('/show/{portfolio:title}', [DetailPortfolioController::class, 'show'])->name('show');
 Route::get('/about', [AboutMeController::class, 'about'])->name('about');
 
-// Route::get('/portfolio', function () {
-//     return Inertia::render('User/Portfolio');
-// })->name('portfolio');
-// Route::get('/about', function () {
-//     return Inertia::render('User/About');
-// })->name('about');
-// route::get('/show/{name}', function () {
-//     return inertia::render('User/Show');
-// })->name('show');
 
 
 Route::redirect('/admin', '/login');
@@ -49,20 +38,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-// Route::prefix('./')->name('./.')->group(function () {
-//     Route::get('/home', function () {
-//         return Inertia::render('User/Index');
-//     })->name('home');
-//     Route::get('/portfolio', function () {
-//         return Inertia::render('Portfolio');
-//     })->name('portfolio');
-//     route::get('/show/{name}', function () {
-//         return inertia::render('Show');
-//     })->name('show');
-//     Route::get('/about', function () {
-//         return Inertia::render('About');
-//     })->name('about');
-// });
+
 
 
 Route::prefix('prototype')->name('prototype.')->group(function () {
