@@ -1,17 +1,23 @@
+import FlashMessage from "@/Components/FlashMessage";
 import NavigationBarAdmin from "@/Layouts/Authenticated/Admin/NavigationBarAdmin";
-import { Link } from "@inertiajs/react";
+import { Link, Head } from "@inertiajs/react";
 
-export default function PortfolioAdmin (){
+export default function PortfolioAdmin ({auth, flashMessage}){
     return (
         <>
+        <Head title="Portfolio Admin" />
         <NavigationBarAdmin />
         <div class="container">
             <h3>Portfolio</h3>
-            <Link href={route('add-portfolio-admin')}>
+            <Link 
+            href={route('admin.portfolio-admin.create')}
+            >
                 <button type="button" class="btn btn-primary btn-lg">
                     Add
                 </button>
             </Link>
+            {flashMessage?.message && <FlashMessage message={flashMessage.message}/>}
+            
 
                     <table class="table table-hover">
                     <thead>
@@ -22,6 +28,7 @@ export default function PortfolioAdmin (){
                         <th scope="col">Url-demo</th>
                         <th scope="col">Use</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,6 +39,11 @@ export default function PortfolioAdmin (){
                         <td>@mdo</td>
                         <td>@mdo</td>
                         <td>@mdo</td>
+                        <td>
+                            
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
                         </tr>
                         <tr>
                         <th scope="row">2</th>

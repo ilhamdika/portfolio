@@ -1,10 +1,12 @@
 import DetailPortfolio from "@/Layouts/Authenticated/DetailPortfolio";
 import NavigationBarTop from "@/Layouts/Authenticated/NavigationBarTop";
-import { Link } from "@inertiajs/react";
+import { Link, Head } from "@inertiajs/react";
+
 
 export default function Show({portfolio}) {
     return (
         <>
+    <Head title={portfolio.title} />
        <NavigationBarTop />
        <div>
         <div className="context">

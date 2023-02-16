@@ -9,6 +9,9 @@ use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\PortfolioController;
 use App\Http\Controllers\User\DetailPortfolioController;
 use App\Http\Controllers\User\AboutMeController;
+use App\Http\Controllers\Admin\AdminPortfolioController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,19 +36,29 @@ Route::get('/about', [AboutMeController::class, 'about'])->name('about');
 
 
 Route::redirect('/admin', '/login');
-Route::get('/dashboard', function () {
-    return Inertia::render('Admin/HomeAdmin');
-})->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/portfolio-admin', function () {
-    return Inertia::render('Admin/PortfolioAdmin');
-})->middleware(['auth', 'verified'])->name('portfolio-admin');
-Route::get('/add-portfolio-admin', function () {
-    return Inertia::render('Admin/PortfolioAdd');
-})->middleware(['auth', 'verified'])->name('add-portfolio-admin');
-Route::get('/about-admin', function () {
-    return Inertia::render('Admin/AboutAdmin');
-})->middleware(['auth', 'verified'])->name('about-admin');
+Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->group(function () {
 
+    Route::resource('portfolio-admin', AdminPortfolioController::class);
+});
+
+
+// Route::get('/dashboard', function () {
+//     return Inertia::render('Admin/HomeAdmin');
+// })->middleware(['auth', 'role:admin'])->name('dashboard');
+
+// Route::get('/portfolio-admin', function () {
+//     return Inertia::render('Admin/PortfolioAdmin');
+// })->middleware(['auth', 'role:admin'])->name('portfolio-admin');
+
+// Route::get('/add-portfolio-admin', function () {
+//     return Inertia::render('Admin/PortfolioAdd');
+// })->middleware(['auth', 'role:admin'])->name('add-portfolio-admin');
+
+// Route::get('/about-admin', function () {
+//     return Inertia::render('Admin/AboutAdmin');
+// })->middleware(['auth', 'verified'])->name('about-admin');
+
+// Route::resource('/portfolio-admin', AdminPortfolioController::class)->name('portfolio-admin');
 
 
 
@@ -65,14 +78,14 @@ Route::prefix('prototype')->name('prototype.')->group(function () {
     })->name('about');
 });
 
-Route::prefix('admin')->name('admin.')->group(function () {
-    route::get('/login', function () {
-        return inertia::render('Prototype/Admin/Login');
-    })->name('login');
-    Route::get('/dashboard', function () {
-        return inertia::render('Prototype/Admin/Dashboard');
-    })->name('dashboard');
-});
+// Route::prefix('admin')->name('admin.')->group(function () {
+//     route::get('/login', function () {
+//         return inertia::render('Prototype/Admin/Login');
+//     })->name('login');
+//     Route::get('/dashboard', function () {
+//         return inertia::render('Prototype/Admin/Dashboard');
+//     })->name('dashboard');
+// });
 
 
 require __DIR__ . '/auth.php';

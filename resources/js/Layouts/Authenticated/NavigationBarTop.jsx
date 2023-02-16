@@ -11,7 +11,7 @@ export default function NavigationBarTop() {
         <Navbar key={expand} expand={expand} className=" navbarCoba mb-3 ">
           <Container fluid>
             <div className='logoNav'>
-              <Link href={route('prototype.home')}>
+              <Link href={route('home')}>
                 This me
               </Link>
             </div>

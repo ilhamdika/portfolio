@@ -14,10 +14,10 @@ export default function AboutMe({ key, name, from, description, skill, hoby, ins
                 
                 <div class="icon">
                     <center>
-                        <a href="#"><img src="/img/instagram.png" alt="" /></a>
-                        <a href="#"><img src="/img/fiverr.png" alt="" /></a>
-                        <a href="#"><img src="/img/twitter.png" alt="" /></a>
-                        <a href="#"><img src="/img/wa.png" alt="" /></a>
+                        <Link href={instagram_url}><img src="/img/instagram.png" alt="" /></Link>
+                        <Link href="#"><img src="/img/fiverr.png" alt="" /></Link>
+                        <Link href="#"><img src="/img/twitter.png" alt="" /></Link>
+                        <Link href="#"><img src="/img/wa.png" alt="" /></Link>
                     </center>
 
             </div>

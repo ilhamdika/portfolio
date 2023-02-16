@@ -11,7 +11,9 @@ export default function NavigationBarAdmin() {
         <Navbar key={expand} expand={expand} className=" navbarCoba mb-3 ">
           <Container fluid>
             <div className='logoNav'>
-              <Link href={route('prototype.home')}>
+                  <Link 
+                  // href={route('dashboard')}
+                  >
                 Admin
               </Link>
             </div>
@@ -28,13 +30,19 @@ export default function NavigationBarAdmin() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="txtNav justify-content-end flex-grow-1 pe-3">
-                  <Link href={route('dashboard')}>
+                  <Link 
+                  // href={route('dashboard')}
+                  >
                     Home
                   </Link>
-                  <Link href={route('portfolio-admin')}>
+                  <Link
+                  // href={route('portfolio-admin')}
+                  >
                     My Portfolio
                 </Link>
-                  <Link href={route('about-admin')}>
+                  <Link 
+                  // href={route('about-admin')}
+                  >
                     About me
                   </Link>
                   <Link method="post" href={route('logout')} as="button">

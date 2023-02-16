@@ -1,10 +1,11 @@
 import CardPortfolio from "@/Layouts/Authenticated/CardPortfolio";
 import NavigationBarTop from "@/Layouts/Authenticated/NavigationBarTop";
-
+import { Head } from "@inertiajs/react";
 
 export default function Portfolio({auth, portfolios}) {
     return (
         <>
+        <Head title="Portfolio" />
         <NavigationBarTop />
        
             <center>
