@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-export default function NavigationBarTop() {
+export default function NavigationBarAdmin() {
     return ( 
       <>
       {[  'sm'].map((expand) => (
@@ -12,7 +12,7 @@ export default function NavigationBarTop() {
           <Container fluid>
             <div className='logoNav'>
               <Link href={route('prototype.home')}>
-                This me
+                Admin
               </Link>
             </div>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -28,9 +28,18 @@ export default function NavigationBarTop() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="txtNav justify-content-end flex-grow-1 pe-3">
-                  <Link href={route('home')}>Home</Link>
-                  <Link href={route('portfolio')}>My Portfolio</Link>
-                  <Link href={route('about')}>About me</Link>
+                  <Link href={route('home')}>
+                    Home
+                  </Link>
+                  <Link href={route('portfolio')}>
+                    My Portfolio
+                </Link>
+                  <Link href={route('about')}>
+                    About me
+                  </Link>
+                  <Link method="post" href={route('logout')} as="button">
+                    Log Out
+                </Link>
                   
                 </Nav>
                 
