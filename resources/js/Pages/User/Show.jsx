@@ -1,14 +1,17 @@
+import DetailPortfolio from "@/Layouts/Authenticated/DetailPortfolio";
+import NavigationBarTop from "@/Layouts/Authenticated/NavigationBarTop";
 import { Link } from "@inertiajs/react";
 
-
-export default function DetailPortfolio ({portfolio}){
+export default function Show({portfolio}) {
     return (
-        <div>
+        <>
+       <NavigationBarTop />
+       <div>
         <div className="context">
-        <h6></h6>
-        <img src="https://www.impdigital.co/wp-content/uploads/2021/03/responsive-website-mockup-1024x671.png" />
-        <Link>
-            {portfolio.url_demo}
+        <h6>{portfolio.title}</h6>
+        <img src={portfolio.thumbnail} />
+        <Link href={portfolio.url_demo}>
+           Demo
         </Link>
         <p>
             {portfolio.use}
@@ -38,5 +41,6 @@ export default function DetailPortfolio ({portfolio}){
             </ul>
     </div >
         </div>
+        </>
     )
 }
