@@ -1,5 +1,6 @@
 import { Link } from "@inertiajs/react"
 export default function CardPortfolio({
+    id,
     name,
     deskripsi,
     thumbnail,
@@ -12,7 +13,7 @@ export default function CardPortfolio({
         <div className="col-md-6 col-xs-6 col-sm-6 col-lg-12">
             <div className="movie-card">
                 <div className="movie-card__overlay">
-                    <Link href={route('prototype.show', name)}>
+                    <Link href={route('show', name)}>
                     <img src={thumbnail} alt="" />
                     </Link>
                 </div>
@@ -29,7 +30,7 @@ export default function CardPortfolio({
                 </div>
                 <div className="movie-card__content">
                     <div className="movie-card__header">
-                        <Link href={route('prototype.show', name)}
+                        <Link href={route('show', name)}
                         className="movie-card__title">
                             {name}
                         </Link>
